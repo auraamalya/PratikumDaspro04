@@ -51,9 +51,21 @@ public class studiKasus204 {
             status = "Kegiatan lainnya tidak memeproleh dana penghargaan.";
         } else {
             status = "jenis kegiatan tidak valid."; 
-        }   
+        } 
         }
 
+        System.out.print("Nama Mahasiswa: " +namaMahasiswa);
+        System.out.print("Jenis Kegiatan: " +jenisKegiatan);
+        System.out.print("Jumlah dokumen: " + jumlahDokumen);
+        System.out.print("Peringkat Juara: " +peringkatJuara);
+        System.out.println("Status: " + status);
+
+        if (jumlahDokumen >= 0 && jumlahDokumen <= 4) {
+            if (jumlahDokumen <4){
+                System.out.println("Dokumen kurang:0");
+            }
+            
+        }
         sc.close();
     }
     
