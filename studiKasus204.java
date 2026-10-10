@@ -4,7 +4,8 @@ public class studiKasus204 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String namaMahasiswa, jenisKegiatan, status;
+        String namaMahasiswa, jenisKegiatan;
+        String status = " ";
         int jumlahDokumen;
         int peringkatJuara = 0;
         int statusPKM = 0;
@@ -58,11 +59,13 @@ public class studiKasus204 {
         System.out.print("Jenis Kegiatan: " +jenisKegiatan);
         System.out.print("Jumlah dokumen: " + jumlahDokumen);
         System.out.print("Peringkat Juara: " +peringkatJuara);
-        System.out.println("Status: " + status);
+        System.out.print("Status: " + status);
 
         if (jumlahDokumen >= 0 && jumlahDokumen <= 4) {
             if (jumlahDokumen <4){
-                System.out.println("Dokumen kurang:0");
+                System.out.print("Dokumen kurang: " + (4-jumlahDokumen));
+            } else {
+                System.out.print("Dokumen kurang: 0");
             }
             
         }
