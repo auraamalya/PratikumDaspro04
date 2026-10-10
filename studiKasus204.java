@@ -39,13 +39,53 @@ public class studiKasus204 {
                 status = "Bukan juara 1, 2, atau 3. Dana penghargaan tidak diberikan.";
             }
 
-        } else {
+        } else if (jenisKegiatan.equals("PKM")){
+
+            if (statusPKM == 1) {
+
+                if (jumlahDokumen == 4) {
+                    status = "Dana penghargaan diberikan"; 
+                } else {
+                    status = "Dokumen tidak lengkap. Dana penghargaan tidak diberikan.";  
+                }
+            } else {
+                status = "PKM tidak lolos pendanaan. Dana penghargaan tidak diberikan.";
+            }
             
+        } else if (jenisKegiatan.equals("PKM")) {
+
+            if (statusPKM == 1) {
+
+                if (jumlahDokumen == 4){
+                    status = "Dana penghargaan diberikan";
+                } else {
+                    status = "Dokumen tidak lengkap. Dana penghargaan tidak diberikan.";
+                }
+            } else {
+                status = "PKM tidak lolos pendanaan. Dana penghargaan tidak diberikan.";
+            }
+            
+        } else if (jenisKegiatan.equals("Lainnya")) {
+            status = "Kegiatan lainnya tiak memperoleh penghargaan."; 
+
+        } else {
+            status = "Jenis kegiatan tidak valid."; 
         }
 
-        
-    
-
+        System.out.println("Nama Mahasiswa: " + nama);
+        System.out.println("Jenis Kegiatan: " + jenisKegiatan);
+        System.out.println("Jumlah Dokumen: " + jumlahDokumen);
+        System.out.println("Status: " + status);
+            
+        if (jumlahDokumen >= 0 && jumlahDokumen <= 4) {
+            if (jumlahDokumen < 4) {
+                System.out.println("Dokumen kurang: " + (4-jumlahDokumen));   
+            } else {
+                System.out.println("Dokumen kurang : 0");
+            }
+            
+        }
+            
         sc.close();
     }
 }
